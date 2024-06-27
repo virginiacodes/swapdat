@@ -1,0 +1,140 @@
+body:hover {
+  cursor: default;
+}
+
+.logo-container {
+  display: flex;
+  background-color: rgb(0, 175, 50);
+  color: white;
+}
+
+.logo-items {
+  width: 50%;
+}
+
+.logo {
+  padding-left: 20px;
+}
+
+.add-profile-icons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  float: right;
+  padding-right: 20px;
+  line-height: 30px;
+}
+
+.icons {
+  width: 50px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.icons:hover {
+  color: rgb(211, 211, 211);
+}
+
+.search-bar-container {
+  width: 60%;
+  top: 30px;
+}
+
+.search-bar {
+  width: 100%;
+  height: 30px;
+  margin-top: 25px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgb(50, 80, 49);
+}
+
+/* ///// Navbar ///// */
+
+.navbar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 15px;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
+}
+
+.navbar-container li:hover {
+  color: rgb(0, 175, 50);
+}
+
+.categories-hidden {
+  display: none;
+}
+
+.categories-container {
+  position: fixed;
+  text-align: center;
+  border: none;
+  background-color: rgb(240, 240, 240, 0.9);
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 0px 20px 0px rgba(197, 197, 197, 0.9);
+}
+
+.categories {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  width: 100%;
+}
+
+.categories li {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.open {
+  color: rgb(0, 175, 50);
+}
+
+/* ///// Free Stuff ///// */
+
+.list-items {
+  list-style: none;
+  display: flex;
+}
+
+.item {
+  position: relative;
+  width: 300px;
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-align: center;
+  border: 1px solid rgb(231, 227, 227);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgb(208, 207, 207);
+}
+
+.image-item {
+  width: 95%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.fa-heart:hover {
+  color: rgb(0, 175, 50);
+}
