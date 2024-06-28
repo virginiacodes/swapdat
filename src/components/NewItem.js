@@ -48,6 +48,7 @@ export default function NewItem({
     };
     setItems([...items, newItem]);
     setNumberOfItems(numberOfItems + 1);
+    setNewItem({});
     onCreateNewItem();
   }
 
