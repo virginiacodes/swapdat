@@ -22,6 +22,7 @@ const categories = [
 ];
 
 export default function App() {
+  // Original items list
   const [items, setItems] = useState([
     {
       id: 1,
@@ -54,15 +55,19 @@ export default function App() {
       free: true,
     },
   ]);
+  // State tracking which category page is open
   const [isOpen, setIsOpen] = useState("");
+  // This state is not used yet, but is here to deal with login page
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // State used to display new item window or hide it
   const [isNewItemWindowOpen, setNewItemWindow] = useState(false);
+  // State containing new item object when created
   const [newItem, setNewItem] = useState({});
 
   function handleChangeTab(tab) {
     setIsOpen(tab);
   }
-
+  // Add item to favourite list when user click on the heart icon
   function handleIsLiked(id) {
     setItems((items) =>
       items.map((item) =>
