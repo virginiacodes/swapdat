@@ -1,4 +1,4 @@
-# SwapDat is an app where users can swap items they no longer need with something else from another user, or just giving them away for free. It is still very much a work in progress, but the basic functionality of posting new items and looking through categories is working.
+SwapDat is an app where users can swap items they no longer need with something else from another user, or just giving them away for free. It is still very much a work in progress, but the basic functionality of posting new items and looking through categories is working.
 
 This is a project I'm working on to sharpen my React skills and have a bit of fun :)
 
