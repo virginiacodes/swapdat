@@ -10,39 +10,6 @@ import SearchBar from "./SearchBar";
 import Items from "./Items";
 import NewItem from "./NewItem";
 
-const listItems = [
-  {
-    id: 1,
-    name: "Box of candles",
-    image: "../../images/candles.jpg",
-    description: "Box of multicolour candles",
-    postcode: "E58AJ",
-    liked: false,
-    categorie: "home",
-    free: true,
-  },
-  {
-    id: 2,
-    name: "House plants",
-    image: "../../images/plants.jpg",
-    description: "Bunch of house plants",
-    postcode: "N46UP",
-    liked: false,
-    categorie: "home",
-    free: true,
-  },
-  {
-    id: 3,
-    name: "Halloween sweets",
-    image: "../../images/candies.jpg",
-    description: "Leftovers from the trick or treat bowl",
-    postcode: "N164TK",
-    liked: false,
-    categorie: "food",
-    free: true,
-  },
-];
-
 const categories = [
   "home",
   "food",
@@ -55,10 +22,42 @@ const categories = [
 ];
 
 export default function App() {
-  const [items, setItems] = useState(listItems);
+  const [items, setItems] = useState([
+    {
+      id: 1,
+      name: "Box of candles",
+      image: "../../images/candles.jpg",
+      description: "Box of multicolour candles",
+      postcode: "E58AJ",
+      liked: false,
+      categorie: "home",
+      free: true,
+    },
+    {
+      id: 2,
+      name: "House plants",
+      image: "../../images/plants.jpg",
+      description: "Bunch of house plants",
+      postcode: "N46UP",
+      liked: false,
+      categorie: "home",
+      free: true,
+    },
+    {
+      id: 3,
+      name: "Halloween sweets",
+      image: "../../images/candies.jpg",
+      description: "Leftovers from the trick or treat bowl",
+      postcode: "N164TK",
+      liked: false,
+      categorie: "food",
+      free: true,
+    },
+  ]);
   const [isOpen, setIsOpen] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isNewItemWindowOpen, setNewItemWindow] = useState(false);
+  const [newItem, setNewItem] = useState({});
 
   function handleChangeTab(tab) {
     setIsOpen(tab);
@@ -87,19 +86,16 @@ export default function App() {
         />
         <NavBar onChangeTab={handleChangeTab} isOpen={isOpen} />
         <SearchBar />
-        {isOpen === "freeStuff" && (
-          <Items items={items} onLike={handleIsLiked} isOpen={isOpen} />
-        )}
-        {isOpen === "favourites" && (
-          <Items items={items} onLike={handleIsLiked} isOpen={isOpen} />
-        )}
-        {categories.includes(isOpen) && (
-          <Items items={items} onLike={handleIsLiked} isOpen={isOpen} />
-        )}
+        <Items items={items} onLike={handleIsLiked} isOpen={isOpen} />
+
         {isNewItemWindowOpen && (
           <NewItem
             isNewItemWindowOpen={isNewItemWindowOpen}
             onCreateNewItem={handleNewItemWindow}
+            newItem={newItem}
+            setNewItem={setNewItem}
+            items={items}
+            setItems={setItems}
           />
         )}
       </>
